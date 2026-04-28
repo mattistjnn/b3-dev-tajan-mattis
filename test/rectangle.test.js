@@ -12,3 +12,17 @@ describe('Rectangle', () => {
     expect(() => new Rectangle(-1, 5)).to.throw('Les dimensions doivent être positives');
   });
 });
+
+describe('getArea()', () => {
+    it('devrait calculer l\'aire correctement', () => {
+      const rect = new Rectangle(10, 5);
+      expect(rect.getArea()).to.equal(50);
+    });
+  });
+
+  describe('getPerimeter()', () => {
+    it('devrait calculer le périmètre correctement', () => {
+      const rect = new Rectangle(10, 5);
+      expect(rect.getPerimeter()).to.equal(30);
+    });
+  });
